@@ -2,7 +2,7 @@
 
 Pikachu là một game đơn giản được phát triển bằng ngôn ngữ lập trình Python với thư viện Pygame. Game cung cấp cho người chơi giao diện bắt mắt cùng hình ảnh và âm thanh sống động, ngoài ra còn có các tính năng như đăng nhập tài khoản, bảng xếp hạng và cài đặt các chế độ.
 
-## **Cấu trúc dự án**
+## **Cấu trúc thư mục**
 
 - **requirements.txt**: File chứa các thư viện cần tải để khởi chạy game.
 - **pikachu.py**: File chạy chính để khởi động game.
