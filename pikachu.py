@@ -63,7 +63,7 @@ getPointSound = pygame.mixer.Sound('Resources/sound_effect/victory.mp3')
 WrongSound = pygame.mixer.Sound('Resources/sound_effect/wrong.mp3')
 startScreenSound = pygame.mixer.Sound('Resources/sound_effect/warriors-of-the-night-assemble.wav')
 listMusicBG = ["Resources/BGmusic/" + i for i in os.listdir("Resources/BGmusic")]
-font_path = "Resources\Fonts\Jersey15-Regular.ttf"
+font_path = "Resources/Fonts/Jersey15-Regular.ttf"
 click = pygame.mixer.Sound("Resources/sound_effect/mouse_click.mp3")
 
 """Xử lý đăng kí, đăng nhập tài khoản"""
@@ -236,9 +236,9 @@ def register_account(username, password):
 
 def showRegisterScreen():
     """Màn hình đăng kí"""
-    login_font = pygame.font.Font('Resources\Fonts\Jersey15-Regular.ttf', 50)
-    input_font = pygame.font.Font('Resources\Fonts\Jersey15-Regular.ttf', 40)
-    button_font = pygame.font.Font('Resources\Fonts\Jersey15-Regular.ttf', 45)
+    login_font = pygame.font.Font('Resources/Fonts/Jersey15-Regular.ttf', 50)
+    input_font = pygame.font.Font('Resources/Fonts/Jersey15-Regular.ttf', 40)
+    button_font = pygame.font.Font('Resources/Fonts/Jersey15-Regular.ttf', 45)
     username = ""
     password = ""
     active_field = "username"
@@ -1306,7 +1306,7 @@ def main():
     pygame.init()
     pygame.mixer.init()
     FPSCLOCK = pygame.time.Clock()
-    DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
+    DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), pygame.SCALED | pygame.RESIZABLE)
     pygame.display.set_caption('Pikachu')
 
     # Khởi tạo font
