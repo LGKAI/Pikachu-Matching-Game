@@ -10,7 +10,7 @@ Pikachu là một tựa game giải đố kinh điển được phát triển b�
 
 ## 🛠 Công nghệ và Kiến thức sử dụng
 
-Dự án này được xây dựng dựa trên sự kết hợp giữa nhiều thư viện Python và các kiến thức nền tảng về lập trình, thuật toán:
+Đồ án này được xây dựng dựa trên sự kết hợp giữa nhiều thư viện Python và các kiến thức nền tảng về lập trình, thuật toán:
 
 ### 1. Công nghệ & Thư viện (Tech Stack)
 - **Python (>= 3.8)**: Ngôn ngữ lập trình cốt lõi để phát triển toàn bộ logic game.
