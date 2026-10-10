@@ -47,7 +47,7 @@ borderColor = WHITE
 barColor = BOLDGREEN
 ACCOUNTS_FILE = "User_data/accounts.json"
 # Load pictures
-aegis = pygame.image.load('Resources/others/aegis_2.jpg')
+aegis = pygame.image.load('Resources/Others/aegis_2.jpg')
 aegis = pygame.transform.scale(aegis, (45, 45))
 pygame.font.init()
 # Load background
@@ -58,13 +58,13 @@ BG = pygame.transform.scale(BG, (WINDOWWIDTH, WINDOWHEIGHT))
 # Load sound and musicbbb
 pygame.mixer.pre_init()
 pygame.mixer.init()
-clickSound = pygame.mixer.Sound('Resources/sound_effect/click_selecting.mp3')
-getPointSound = pygame.mixer.Sound('Resources/sound_effect/victory.mp3')
-WrongSound = pygame.mixer.Sound('Resources/sound_effect/wrong.mp3')
-startScreenSound = pygame.mixer.Sound('Resources/sound_effect/warriors-of-the-night-assemble.wav')
+clickSound = pygame.mixer.Sound('Resources/Sound_effect/click_selecting.mp3')
+getPointSound = pygame.mixer.Sound('Resources/Sound_effect/victory.mp3')
+WrongSound = pygame.mixer.Sound('Resources/Sound_effect/wrong.mp3')
+startScreenSound = pygame.mixer.Sound('Resources/Sound_effect/warriors-of-the-night-assemble.wav')
 listMusicBG = ["Resources/BGmusic/" + i for i in os.listdir("Resources/BGmusic")]
 font_path = "Resources/Fonts/Jersey15-Regular.ttf"
-click = pygame.mixer.Sound("Resources/sound_effect/mouse_click.mp3")
+click = pygame.mixer.Sound("Resources/Sound_effect/mouse_click.mp3")
 
 """Xử lý đăng kí, đăng nhập tài khoản"""
 def mouseclick():
@@ -99,10 +99,10 @@ def showLoginScreen():
     login_button_rect.center = (WINDOWWIDTH // 2 , WINDOWHEIGHT//2 + 100)
     button_text = login_font.render("LOGIN", True, (255,255,0))
     button_rect = button_text.get_rect(center = (WINDOWWIDTH // 2 , WINDOWHEIGHT//2 + 100) )
-    login_title = pygame.image.load("Resources/others/login2.png")
+    login_title = pygame.image.load("Resources/Others/login2.png")
     login_title_rect = login_title.get_rect()
     login_title_rect.center = (WINDOWWIDTH//2, 80)
-    board = pygame.image.load("Resources/others/Board.png")
+    board = pygame.image.load("Resources/Others/Board.png")
     board = pygame.transform.scale(board,(720,660))
     board_rect = board.get_rect()
     board_rect.center = (WINDOWWIDTH//2, WINDOWHEIGHT//2)
@@ -263,10 +263,10 @@ def showRegisterScreen():
     register_button_rect.center = (WINDOWWIDTH // 2 , WINDOWHEIGHT//2 + 100)
     button_text = login_font.render("REGISTER", True, (255,255,255))
     button_rect = button_text.get_rect(center = (WINDOWWIDTH // 2 , WINDOWHEIGHT//2 + 100) )
-    register_title = pygame.image.load("Resources/others/register.png")
+    register_title = pygame.image.load("Resources/Others/register.png")
     register_title_rect = register_title.get_rect()
     register_title_rect.center = (WINDOWWIDTH//2, 80)
-    board = pygame.image.load("Resources/others/Board.png")
+    board = pygame.image.load("Resources/Others/Board.png")
     board = pygame.transform.scale(board,(720,660))
     board_rect = board.get_rect()
     board_rect.center = (WINDOWWIDTH//2, WINDOWHEIGHT//2)
@@ -380,11 +380,11 @@ def showMainAuthScreen():
     arr = pygame.surfarray.array3d(startBG)  # Chuyển thành numpy array
     blurred_arr = scipy.ndimage.gaussian_filter(arr, sigma=(sigma, sigma, 0))  # Làm mờ Gaussian
     blurred_bg =  pygame.surfarray.make_surface(blurred_arr)
-    board = pygame.image.load("Resources/others/Board.png")
+    board = pygame.image.load("Resources/Others/Board.png")
     board = pygame.transform.scale(board,(600,550))
     board_rect = board.get_rect()
     board_rect.center = (WINDOWWIDTH//2, WINDOWHEIGHT//2)
-    welcome = pygame.image.load("Resources/others/welcome.png")
+    welcome = pygame.image.load("Resources/Others/welcome.png")
     welcome_rect = welcome.get_rect(center = (WINDOWWIDTH//2, 125))
     while True:
         #Hiện background
@@ -428,7 +428,7 @@ def showMainAuthScreen():
 """Màn hình khởi đầu và các nút"""
 def showStartScreen():
     Path = "Resources/Buttons/"
-    newGame1 = pygame.image.load( Path + "NewGame/A_Newgame1.png")
+    newGame1 = pygame.image.load( Path + "NewGame/A_NewGame1.png")
     newGame2 = pygame.image.load( Path + "NewGame/B_NewGame1.png")
     newGame1 = pygame.transform.scale(newGame1, (192,64))
     newGame2 = pygame.transform.scale(newGame2, (192,64))
@@ -452,9 +452,9 @@ def showStartScreen():
     Exit2 = pygame.transform.scale(Exit2, (192,64))
     exitRect = Exit1.get_rect()
     exitRect.center = (WINDOWWIDTH // 4 + 20, 4 * WINDOWHEIGHT // 9 + 240)
-    BTrophy = pygame.image.load("Resources/others/Trophies/bronze_trophy.png")
-    STrophy = pygame.image.load("Resources/others/Trophies/silver_trophy.png")
-    GTrophy = pygame.image.load("Resources/others/Trophies/gold_trophy.png")
+    BTrophy = pygame.image.load("Resources/Others/Trophies/bronze_trophy.png")
+    STrophy = pygame.image.load("Resources/Others/Trophies/silver_trophy.png")
+    GTrophy = pygame.image.load("Resources/Others/Trophies/gold_trophy.png")
     Leaderboard1 = pygame.image.load(Path + "Blank/A Buttons Medium1.png")
     Leaderboard2 = pygame.image.load(Path + "Blank/B Buttons Medium2.png")
     Leaderboard1 = pygame.transform.scale(Leaderboard1, (192,64))
@@ -462,7 +462,7 @@ def showStartScreen():
     leaderboardRect = Leaderboard1.get_rect()
     leaderboardRect.center = ( 100, WINDOWHEIGHT - 50)
     STARTFONT = pygame.font.Font("Resources/Fonts/Jersey15-Regular.ttf", 36)
-    logo = pygame.image.load("Resources/others/logo.png")
+    logo = pygame.image.load("Resources/Others/logo.png")
     startScreenSound.play()
     while True:
         DISPLAYSURF.blit(startBG, (0, 0))
@@ -580,11 +580,11 @@ arr = pygame.surfarray.array3d(startBG)  # Chuyển thành numpy array
 blurred_arr = scipy.ndimage.gaussian_filter(arr, sigma=(sigma, sigma, 0))  # Làm mờ Gaussian
 blurred_bg =  pygame.surfarray.make_surface(blurred_arr)
 
-settingboard = pygame.image.load("Resources/others/Board.png")
+settingboard = pygame.image.load("Resources/Others/Board.png")
 settingboard = pygame.transform.scale(settingboard,(600,550))
 settingboard_rect = settingboard.get_rect()
 settingboard_rect.center = (WINDOWWIDTH//2, WINDOWHEIGHT//2)
-setting = pygame.image.load("Resources/others/setting.png")
+setting = pygame.image.load("Resources/Others/setting.png")
 setting = pygame.transform.scale(setting,(375,100))
 setting_rect = setting.get_rect()
 setting_rect.center = (WINDOWWIDTH//2, WINDOWHEIGHT//2 - 200)
@@ -725,7 +725,7 @@ def showLeaderboard(screen, font, WINDOWWIDTH, WINDOWHEIGHT):
     arr = pygame.surfarray.array3d(startBG)  # Chuyển thành numpy array
     blurred_arr = scipy.ndimage.gaussian_filter(arr, sigma=(sigma, sigma, 0))  # Làm mờ Gaussian
     blurred_bg =  pygame.surfarray.make_surface(blurred_arr)
-    board = pygame.image.load("Resources/others/leaderboard.png")
+    board = pygame.image.load("Resources/Others/leaderboard.png")
     board = pygame.transform.scale_by(board,7)
     board_rect = board.get_rect(center = (WINDOWWIDTH//2, WINDOWHEIGHT//2))
     back = pygame.image.load("Resources/Buttons/Back2/A_Back1.png")
@@ -733,7 +733,7 @@ def showLeaderboard(screen, font, WINDOWWIDTH, WINDOWHEIGHT):
     back = pygame.transform.scale_by(back,2.5)
     back_hover = pygame.transform.scale_by(back_hover, 2.5)
     back_rect = back.get_rect(center = (120,60))
-    leaderboard_title = pygame.image.load("Resources/others/leaderboard_title.png")
+    leaderboard_title = pygame.image.load("Resources/Others/leaderboard_title.png")
     leaderboard_title = pygame.transform.scale_by(leaderboard_title, 0.6)
     leaderboard_title_rect = leaderboard_title.get_rect(center = (WINDOWWIDTH//2, 65))
     while running:
@@ -795,7 +795,7 @@ def showPauseScreen():
     # Nút Exit
     exit1, exit2, exit3, exit_rect = get_buttons("Resources/Buttons/Exit",(WINDOWWIDTH // 2, WINDOWHEIGHT // 2 + 40) ,(192,64) )
 
-    Board = pygame.image.load("Resources/others/Board.png")
+    Board = pygame.image.load("Resources/Others/Board.png")
     Board = pygame.transform.scale(Board, (360,330))
     Board_rect = Board.get_rect()
     Board_rect.center = (WINDOWWIDTH//2, WINDOWHEIGHT // 2)

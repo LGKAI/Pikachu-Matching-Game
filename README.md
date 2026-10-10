@@ -39,15 +39,23 @@ Dự án này được xây dựng dựa trên sự kết hợp giữa nhiều t
 
 ```text
 Project_Pikachu-Matching-Game/
-├── pikachu.py           # File mã nguồn chính, chạy để khởi động game
-├── requirements.txt     # Danh sách các thư viện cần thiết (pygame, numpy, scipy)
-├── Resources/           # Thư mục chứa tài nguyên đa phương tiện
-│   ├── Background/      # Hình ảnh nền
-│   ├── BGmusic/         # Nhạc nền
-│   ├── sound_effect/    # Hiệu ứng âm thanh (click, thắng, thua...)
-│   └── ...              # Hình ảnh UI và các icon Pokémon
-└── User_data/           # Thư mục chứa dữ liệu cục bộ
-    └── accounts.json    # File lưu trữ thông tin tài khoản và điểm số
+├── report.pdf               # Báo cáo đồ án
+├── video.mp4                # Video demo đồ án
+└── source/                  # Thư mục chứa mã nguồn trò chơi
+    ├── pikachu.py           # File mã nguồn chính, chạy để khởi động game
+    ├── requirements.txt     # Danh sách các thư viện cần thiết (pygame, numpy, scipy)
+    ├── README.md            # Tài liệu hướng dẫn đồ án
+    ├── Resources/           # Thư mục chứa tài nguyên đa phương tiện
+    │   ├── Background/      # Hình ảnh nền trò chơi
+    │   ├── BGmusic/         # Nhạc nền các cấp độ chơi
+    │   ├── Buttons/         # Hình ảnh các nút giao diện (New Game, Settings, Exit...)
+    │   ├── Fonts/           # Phông chữ sử dụng trong game (Jersey15, Jersey20)
+    │   ├── Others/          # Hình ảnh bổ trợ, bảng thông báo, cúp thành tích, logo
+    │   ├── Pokemon_icons/   # Bộ icon các thẻ Pokémon trên bàn cờ
+    │   └── Sound_effect/    # Hiệu ứng âm thanh (click chuột, ghép đúng/sai, chiến thắng...)
+    └── User_data/           # Thư mục chứa dữ liệu cục bộ của người chơi
+        ├── accounts.json    # File lưu trữ thông tin tài khoản
+        └── scoreboard.json  # File lưu trữ điểm số bảng xếp hạng (Leaderboard)
 ```
 
 ---
@@ -56,17 +64,23 @@ Project_Pikachu-Matching-Game/
 
 ### 1. Cài đặt môi trường
 Đầu tiên, bạn cần đảm bảo máy tính đã được cài đặt Python (phiên bản `>= 3.8`).
-Sau đó, mở Terminal / Command Prompt và cài đặt các thư viện cần thiết thông qua tệp `requirements.txt`:
+Sau đó, mở Terminal / Command Prompt, di chuyển vào thư mục chứa mã nguồn và cài đặt các thư viện cần thiết thông qua tệp `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 2. Khởi chạy Game
-Sau khi quá trình cài đặt hoàn tất, di chuyển vào thư mục mã nguồn (chứa file `pikachu.py`) và thực thi lệnh sau:
+Sau khi quá trình cài đặt hoàn tất, thực thi lệnh sau để khởi chạy trò chơi:
 
 ```bash
 python pikachu.py
 ```
+
+> **Lưu ý:** Nếu bạn đang ở thư mục gốc `Project_Pikachu-Matching-Game`, hãy chuyển vào thư mục `source` trước khi chạy:
+> ```bash
+> cd source
+> python pikachu.py
+> ```
 
 Chúc bạn có những giờ phút giải trí vui vẻ với Pikachu Matching Game! 🎮
